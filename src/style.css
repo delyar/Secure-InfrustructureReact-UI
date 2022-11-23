@@ -19,13 +19,14 @@ nav {
   box-shadow: 0px 2.98256px 7.4564px rgba(66, 216, 243, 0.1);
 }
 
-.nav--logo_text, .nav--title {
+.nav--logo_text,
+.nav--title {
   margin: 0;
 }
 
 .nav--logo_text {
   margin-right: auto;
-  color: #61DAFB;
+  color: #00a9c5;
   font-weight: 700;
   font-size: 22px;
 }
@@ -49,12 +50,12 @@ nav {
 
 main {
   padding: 57px 27px;
-    color: white;
-    background-image: url(./images/icons-security.png);
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: 15%;
-    background-size: 25%;
+  color: white;
+  background-image: url(./images/icons-security.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 15%;
+  background-size: 25%;
 }
 
 .main--title {
@@ -65,7 +66,9 @@ main {
 
 .hero--text {
   margin-top: 10;
-  max-width: 700px;
+  max-width: 600px;
+  margin-bottom: 50px;
+  text-align: justify;
 }
 
 .main--facts {
@@ -73,12 +76,68 @@ main {
   max-width: 800px;
 }
 
-.main--facts > li {
+.main--facts>li {
   line-height: 19px;
   padding-block: 10px;
 }
 
-.main--facts > li::marker {
+.main--facts>li::marker {
   font-size: 1.4rem;
-  color: #61DAFB;
+  color: #00a9c5;
+}
+
+select {
+  width: 40%;
+  padding: 10px 15px;
+  border: 1px dashed #00a9c5;
+  border-radius: 4px;
+  background-color: white;
+  margin-left: 100px;
+  color: black;
+}
+
+input {
+  border: 2px solid;
+  border-radius: 4px;
+  font-size: 1rem;
+  min-width: 130px;
+  padding: 0.5rem;
+  width: 40%;
+  transition: background-color 0.5s ease-out;
+  margin-left: 130px;
+}
+
+input[type="radio"]{
+	color: #00a9c5;
+  margin: 0px;
+  margin-top: 20px;
+  width: 60px;
+  margin-left: 150px;
+}
+
+.form--button {
+  border-radius: 5px;
+  background: linear-gradient(90.41deg, #00a9c5 1.14%, #4e338d 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 67%;
+  height: 38px;
+  font-size: 1.3rem;
+}
+
+#jack {
+  margin-left: 75px;
+}
+
+#rname {
+  margin-left: 75px;
+}
+
+#regionSelect {
+  margin-left: 144px;
+}
+
+input:disabled {
+  background: #8091ad;
 }

@@ -6,7 +6,7 @@ export default function Navbar() {
         <nav>
             <img  className="nav--icon" src={logo} />
             <h3 className="nav--logo_text">Secure Infrustructure</h3>
-            <h4 className="nav--title">Intern Project</h4>
+            <h4 className="nav--title">version 1.0.0</h4>
         </nav>
     )
 }
