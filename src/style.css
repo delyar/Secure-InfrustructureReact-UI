@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background-color: #282D35;
+}
+
+
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #21222A;
+  height: 80px;
+  padding: 30px 25px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(66, 216, 243, 0.1);
+}
+
+.nav--logo_text, .nav--title {
+  margin: 0;
+}
+
+.nav--logo_text {
+  margin-right: auto;
+  color: #61DAFB;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.nav--title {
+  color: #DEEBF8;
+  font-weight: 600;
+}
+
+.nav--icon {
+  height: 50px;
+  margin-right: 7px;
+  max-width: 100px;
+}
+
+
+
+
+
+
+
+main {
+  padding: 57px 27px;
+    color: white;
+    background-image: url(./images/icons-security.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 15%;
+    background-size: 25%;
+}
+
+.main--title {
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05em;
+}
+
+.hero--text {
+  margin-top: 10;
+  max-width: 700px;
+}
+
+.main--facts {
+  margin-top: 46px;
+  max-width: 800px;
+}
+
+.main--facts > li {
+  line-height: 19px;
+  padding-block: 10px;
+}
+
+.main--facts > li::marker {
+  font-size: 1.4rem;
+  color: #61DAFB;
+}
