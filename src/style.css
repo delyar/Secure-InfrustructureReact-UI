@@ -108,12 +108,13 @@ input {
 }
 
 input[type="radio"]{
-	color: #00a9c5;
   margin: 0px;
   margin-top: 20px;
   width: 60px;
   margin-left: 150px;
+  accent-color: #00a9c5;
 }
+
 
 .form--button {
   border-radius: 5px;
