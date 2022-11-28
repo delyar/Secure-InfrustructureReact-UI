@@ -15,6 +15,7 @@ export default function Main() {
         console.log(tenantID, resourceGroup, subscription, resourceName, region)
     }
 
+
     return (
         <main>
             <h1 className="main--title">Resource Details</h1>
@@ -23,9 +24,9 @@ export default function Main() {
             <div className="form">
                 <label for="fname">Tenant ID</label>
                 <input disabled="disabled" type="text" id="fname" name="fname" value={tenantID} />
+                <br />
+                <br />
 
-                <br />
-                <br />
 
                 <label for="subscription">Subscription   </label>
                 <select name="subscription" onChange={(e)=>{setSubscription(e.target.value)}}>
@@ -33,9 +34,9 @@ export default function Main() {
                     <option value="sub1">Sub 1</option>
                     <option value="sub2">Sub 2</option>
                 </select>
+                <br />
+                <br />
 
-                <br />
-                <br />
 
                 <label for="resourceGroup">Resource group     </label>
                 <select name="resourceGroup" id="jack" onChange={(e)=>{setRG(e.target.value)}}>
