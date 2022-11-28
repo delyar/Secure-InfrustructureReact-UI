@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { token } from '../constants/token.js'
 
 export default function Main() {
 
@@ -16,16 +17,25 @@ export default function Main() {
         console.log(tenantID, resourceGroup, subscription, resourceName, region)
     }
 
+
+    var url = "/subscriptions?api-version=2020-01-01";
+    var bearer = 'Bearer ' + token;
     useEffect(() => {
-        fetch("https://swapi.dev/api/people")
-            .then((data) => data.json())
-            .then((val) => setSubscriptions(val["results"]))
+        fetch(url, {
+            method: 'GET',
+            withCredentials: true,
+            credentials: 'include',
+            headers: {
+                'Authorization': bearer,
+            }
+        })
+        .then((data) => data.json())
+        // .then((val) => console.log(val.value))
+        .then((val) => setSubscriptions(val.value))
     }, [])
 
-    console.log(subscriptionNames, "subs")
-
-
-    // console.log(values, "values")
+    console.log(subscriptionNames, "subscriptions list")
+    // console.log(token, "this token")
 
     return (
         <main>
@@ -40,10 +50,10 @@ export default function Main() {
 
 
                 <label htmlFor="subscription">Subscription   </label>
-                <select name="subscription" onChange={(e) => { setSubscription(e.target.value) }}>
+                <select title="subscription select" name="subscription" onChange={(e) => { setSubscription(e.target.value) }}>
                     <option value="DEFAULT" disabled>Choose one</option>
                     {
-                        subscriptionNames.map((opts, i) => <option key={i} value={opts.name}>{opts.name}</option>)
+                        subscriptionNames.map((opts, i) => <option key={i} value={opts.displayName}>{opts.displayName}</option>)
                     }
                 </select>
                 <br />
@@ -51,7 +61,7 @@ export default function Main() {
 
 
                 <label htmlFor="resourceGroup">Resource group     </label>
-                <select name="resourceGroup" id="jack" onChange={(e) => { setRG(e.target.value) }}>
+                <select title="resource group select" name="resourceGroup" id="jack" onChange={(e) => { setRG(e.target.value) }}>
                     <option value="DEFAULT" disabled>Choose one</option>
                     <option value="r1">Resource Group 1</option>
                     <option value="r2">My RG</option>
@@ -86,7 +96,7 @@ export default function Main() {
                 <br />
 
                 <label htmlFor="region">Region</label>
-                <select name="region" id="regionSelect" onChange={(e) => { setRegion(e.target.value) }}>
+                <select title="region select" name="region" id="regionSelect" onChange={(e) => { setRegion(e.target.value) }}>
                     <option value="DEFAULT" disabled>Choose one</option>
                     <option value="sydney">west us</option>
                     <option value="melbourne">east US</option>
